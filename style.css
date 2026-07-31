@@ -1,0 +1,27 @@
+.donate-hero{
+    height:40vh;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url("../images/donate.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+}
+
+.donate-content h1{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.donate-content p{
+    font-size:20px;
+    width:70%;
+    margin:auto;
+}
