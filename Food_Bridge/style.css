@@ -1,0 +1,353 @@
+/* ===== 1. Basic Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #26352c;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+/* ===== 2. Navigation Bar ===== */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #24834a;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #26352c;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #24834a;
+}
+
+/* ===== 3. Hero Section ===== */
+.hero {
+    min-height: 540px;
+    padding: 90px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #e9f8ed, #f8fff5);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.tagline {
+    color: #24834a;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.2;
+    margin-bottom: 24px;
+    color: #20392a;
+}
+
+.hero h1 span {
+    display: block;
+    color: #24834a;
+}
+
+.hero-content > p:not(.tagline) {
+    max-width: 620px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    color: #59685d;
+}
+
+/* ===== 4. Donate Button ===== */
+.donate-button {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: #24834a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.donate-button:hover {
+    background-color: #176537;
+    transform: translateY(-3px);
+}
+
+/* ===== 5. About Section ===== */
+.about {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 24px;
+    text-align: center;
+}
+
+.about h2,
+.how-it-works h2 {
+    font-size: 34px;
+    color: #20392a;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: #59685d;
+    font-size: 17px;
+}
+
+/* ===== 6. How It Works ===== */
+.how-it-works {
+    padding: 75px 24px;
+    text-align: center;
+    background-color: #f7faf7;
+}
+
+.steps {
+    max-width: 1100px;
+    margin: 35px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.step {
+    background-color: #ffffff;
+    padding: 32px 24px;
+    border-radius: 12px;
+    border: 1px solid #e4eee6;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(36, 131, 74, 0.10);
+}
+
+.step h3 {
+    color: #24834a;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.step p {
+    color: #59685d;
+    font-size: 15px;
+}
+
+/* ===== 7. Footer ===== */
+footer {
+    padding: 24px;
+    background-color: #20392a;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ===== 8. Responsive Design ===== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .hero {
+        min-height: 460px;
+        padding: 65px 20px;
+    }
+
+    .hero-content > p:not(.tagline) {
+        font-size: 16px;
+    }
+
+    .about {
+        padding: 55px 20px;
+    }
+
+    .about h2,
+    .how-it-works h2 {
+        font-size: 28px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+    }
+}
+
+/* ===== Donation Page ===== */
+
+.donation-section {
+    background-color: #f7faf7;
+    padding: 65px 20px 80px;
+}
+
+.donation-heading {
+    max-width: 700px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.donation-heading h1 {
+    font-size: clamp(32px, 5vw, 46px);
+    line-height: 1.2;
+    margin-bottom: 18px;
+    color: #20392a;
+}
+
+.donation-heading h1 span {
+    color: #24834a;
+}
+
+.donation-heading > p:last-child {
+    color: #59685d;
+    font-size: 17px;
+}
+
+.donation-form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 35px;
+    background-color: #ffffff;
+    border: 1px solid #e4eee6;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(32, 57, 42, 0.07);
+}
+
+.donation-form h2 {
+    color: #20392a;
+    margin-bottom: 28px;
+    font-size: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 22px;
+    min-width: 0;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #26352c;
+    font-size: 15px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d5e0d7;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #26352c;
+    font: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 2px solid #24834a;
+    outline-offset: 2px;
+    border-color: #24834a;
+}
+
+.form-group small {
+    color: #59685d;
+    font-size: 13px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.donation-form .donate-button {
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-note {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 13px;
+    color: #59685d;
+}
+
+@media (max-width: 600px) {
+    .donation-section {
+        padding: 45px 15px 55px;
+    }
+
+    .donation-form {
+        padding: 22px 18px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
