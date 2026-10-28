@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Donate Food | FoodBridge</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">FoodBridge</a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+                <li><a href="donate.html">Donate Food</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Donation Form -->
+    <main>
+        <section class="donation-section">
+
+            <div class="donation-heading">
+                <p class="tagline">MAKE A DIFFERENCE</p>
+                <h1>Donate Food, <span>Share Hope</span></h1>
+                <p>
+                    Share your surplus food details so an NGO or
+                    authorized partner can review your donation.
+                </p>
+            </div>
+
+            <form class="donation-form" id="donationForm">
+
+                <h2>Food Donation Details</h2>
+                <p id="formMessage" role="status" aria-live="polite"></p>
+
+                <div class="form-group">
+                    <label for="donorName">Donor Name</label>
+                    <input
+                        type="text"
+                        id="donorName"
+                        name="donorName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Contact Number</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your contact number"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="foodName">Food Name</label>
+                    <input
+                        type="text"
+                        id="foodName"
+                        name="foodName"
+                        placeholder="e.g. Rice, vegetables, packed meals"
+                        required
+                    >
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <input
+                            type="number"
+                            id="quantity"
+                            name="quantity"
+                            min="1"
+                            placeholder="e.g. 40"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="unit">Quantity Unit</label>
+                        <select id="unit" name="unit" required>
+                            <option value="">Select unit</option>
+                            <option value="meals">Meals</option>
+                            <option value="kg">Kilograms</option>
+                            <option value="litres">Litres</option>
+                            <option value="packets">Packets</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="foodType">Food Type</label>
+                    <select id="foodType" name="foodType" required>
+                        <option value="">Select food type</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="non-vegetarian">Non-vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="pickupLocation">Pickup Location</label>
+                    <textarea
+                        id="pickupLocation"
+                        name="pickupLocation"
+                        rows="3"
+                        placeholder="Enter the complete pickup address"
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="preparedAt">Food Preparation Time</label>
+                    <input
+                        type="datetime-local"
+                        id="preparedAt"
+                        name="preparedAt"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="safeUntil">Safe-Use Deadline</label>
+                    <input
+                        type="datetime-local"
+                        id="safeUntil"
+                        name="safeUntil"
+                        required
+                    >
+                    <small>
+                        Enter a realistic deadline based on the food type
+                        and storage conditions.
+                    </small>
+                </div>
+
+                <button type="submit" class="donate-button">
+                    Submit Donation
+                </button>
+
+                <p class="form-note">
+                    Submission and donation tracking will be connected
+                    in the next development step.
+                </p>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FoodBridge. Sharing food, spreading hope.</p>
+    </footer>
+<script src="js/script.js"></script>
+</body>
+</html>
